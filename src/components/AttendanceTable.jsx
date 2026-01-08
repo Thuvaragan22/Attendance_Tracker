@@ -1,18 +1,17 @@
-import StudentRow from "./StudentRow";
+import StudentRow from "./StudentRow.jsx";
 
 function AttendanceTable({ students, toggleStatus, updateRemarks }) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="bg-white rounded-xl shadow overflow-x-auto">
       <table className="w-full">
-        <thead>
-          <tr className="bg-indigo-600 text-white">
-            <th className="px-6 py-4">Roll</th>
-            <th className="px-6 py-4">Name</th>
-            <th className="px-6 py-4 text-center">Status</th>
-            <th className="px-6 py-4">Remarks</th>
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="p-3 text-left">Roll</th>
+            <th className="p-3 text-left">Name</th>
+            <th className="p-3 text-left">Status</th>
+            <th className="p-3 text-left">Remarks</th>
           </tr>
         </thead>
-
         <tbody>
           {students.map((student) => (
             <StudentRow
